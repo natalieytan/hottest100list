@@ -1,0 +1,40 @@
+
+
+<header class="pageheader">
+  <h2><%= @song.title.titleize %></h2>
+</header>
+<article class="songarticle">
+  <div class="videoWrapper">
+  <iframe id="ytplayer" type="text/html" width="640" height="360"
+    src="https://www.youtube.com/embed/<%= @song.videoid %>?autoplay=0"
+    frameborder="0"></iframe>
+  </div>
+  <div class="songinfo">
+  <p>
+  <strong>Title: </strong>
+  <%= @song.title.titleize %>
+  </p>
+  <p>
+  <strong>Year:</strong>
+  <a href="/year/<%= @song.year %>">
+  <%= @song.year %>
+  </a>
+  </p>
+  <p>
+  <strong>Rank: </strong>
+  <%= @song.rank %>
+  </p>
+  <p>
+  <strong>Artist:  </strong>
+  <a href="/artist/<%= @song.artist_slug %>">
+  <%= @song.artist.titleize %>
+  </a>
+  </p>
+  <p>
+  <strong>Country:  </strong>
+  <%= @song.country %>
+  </p>
+  </div>
+</article>
+
+  

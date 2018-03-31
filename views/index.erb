@@ -1,0 +1,19 @@
+<div class="centrebox">
+
+<div class="indexbox">
+<h3> Welcome! </h3>
+
+<p> Hottest 100 is a fansite listing <a href="http://www.abc.net.au/triplej/hottest100/17/" target="_blank">Triple J's hottest 100</a> songs through the years. </p>
+<br />
+<h3> Pick a year and go! </h3>
+<form id="indexyearbox" action="/year" method="POST">
+<select id="selected_year" name="selected_year" class="selected_year" required>
+<option disabled selected  value="">Year</option>
+<% @years.each do |year| %>
+    <option value="<%= year.year %>"><%= year.year %></option>
+<%end%>
+</select>
+<button type="submit" form="indexyearbox" class="yearbutton" value="Submit">Go!</button>
+</form>
+</div>
+</div>

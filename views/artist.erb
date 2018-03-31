@@ -1,0 +1,35 @@
+<header class="pageheader">
+<h2><%= @artist %></h2>
+</header>
+    <div class="flexbox">
+        <% @songs.each do |song| %>
+            <figure class="songbox">
+            <a href="/song/<%= song.id %>">
+            <img class="songpic" src="<%= song.image %>"/>
+            </a>
+            <figcaption class="songdesc">
+
+                    <div class="songrank">
+                    <p><%= song.rank %></p>
+                     <p class="smalltext">
+                    <a href="/year/<%= song.year %>">
+                     <%= song.year %></a>
+                     </p>
+                    </div>
+                    <div class="songdetail">
+                    <p>
+                    <a href="/song/<%= song.id %>">
+                     <%= song.title.titleize %>
+                     </a>
+                    </p>
+                     <p class="smalltext">
+                    by <a href="/artist/<%= song.artist_slug %>">
+                     <%= song.artist.titleize %>
+                     </p>
+                     </a>
+                     
+                     </div>
+            </figcaption>
+            </figure>
+        <% end %>
+    </div>

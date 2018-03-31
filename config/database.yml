@@ -1,0 +1,14 @@
+development:
+  adapter: sqlite3
+  database: db/development.sqlite
+  host: localhost
+  pool: 5
+  timeout: 5000
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  database: mydb
+  host: localhost 
+  pool: 5
+  timeout: 5000

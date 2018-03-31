@@ -1,0 +1,221 @@
+* {
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+ }
+ 
+ :root {
+     font-size: 16px;
+ }
+
+ :focus {
+     outline: #FF4B4F;
+ }
+ 
+ body {
+     background: #FDFFFC;
+     color: #000F08;
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+ }
+ 
+ .topheader {
+     background: #E9E9E9;
+     color: #FF4B4F;
+     position: fixed;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1;
+     padding: 0.5rem;
+ }
+ 
+ h2 {
+     font-size: 2rem;
+ }
+
+ h3 {
+     font-size: 1.5rem;
+     margin: 1rem;
+ }
+ 
+ main {
+     padding: 5rem 1rem 1rem 1rem;
+     flex-grow: 1;
+ }
+ 
+ a:link, a:visited  {
+     text-decoration: none;
+     font-weight: bold;
+     color: #474448;
+     transition: 0.2s;
+ }
+ 
+ a:hover {
+     color: #313638;
+     text-decoration: underline;
+ }
+
+ header > div {
+     margin-right: 2rem;
+ }
+ 
+ .selected_year, .yearbutton {
+     font:  bold 1.1rem 'Poppins', Helvetica, Arial, sans-serif;
+     color: #FF4B4F;
+     background: #E9E9E9;
+     border-radius: 5px;
+     border: 1px solid #FF4B4F;
+     cursor: pointer;
+     margin-right: 0.5rem;
+     padding: 0 10px 0 10px;
+ }
+ 
+ .yearbutton:hover {
+     background: #FF4B4F;
+     color: #000F08;
+ }
+ 
+ .pageheader {
+     text-align: center;
+ }
+
+ .flexbox {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+ 
+ .songbox {
+     width: 320px;
+     margin: 10px;
+     padding: 0rem;
+     border: 1px solid #A2A79E;
+     border-radius: 5px;
+     overflow: hidden;
+     box-shadow: 1px 1px #FBFEF9;
+     background: #FFF;
+ }
+ 
+ 
+ .songdesc {
+     display: flex;
+     align-items: stretch;
+     height: 6em;
+     margin: 0.2rem;
+ }
+ 
+ .songrank {
+    width: 30%;
+     font-size: 2rem;
+     font-weight: bold;
+     border-radius: 5px;
+     background: #FF4B4F;
+     color: #FFF;
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .songrank a {
+    color: #FAFAFA;
+ }
+ 
+ .songrank a:hover {
+    color: #FFF;
+ }
+
+ .songdetail {
+     width: 70%;
+     padding: 0.8rem;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-content: flex-start;
+ }
+ 
+ .songarticle {
+     width: 95%;
+     max-width: 700px;
+     margin: auto;
+     padding: 2rem;
+     border: 1px solid #A2A79E;
+     border-radius: 5px;
+     box-shadow: 1px 1px #FBFEF9;
+     background: #FFF;
+     text-align: center;
+ }
+ .songinfo {
+    max-width: 640px;
+    border-top: 4px solid #A2A79E;
+    border-bottom: 4px solid #A2A79E;
+    padding: 1.5rem;
+    margin: 1.5rem;
+ }
+
+ .videoWrapper {
+     margin: auto;
+     width: 640px;
+ }
+
+ .smalltext {
+     font-size: 0.8rem;
+ }
+
+ .centrebox {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 80vh;
+     background-image: url('/assets/images/triplej.svg');
+     background-repeat: no-repeat;
+     background-size: contain;    
+     background-position: bottom right;
+ }
+
+ .indexbox {
+    max-width: 400px;
+     padding: 4rem;
+     text-align: center;
+     background: rgba(250, 250, 250, 0.8);
+     border-radius: 2rem;
+     border: 1px solid #A2A79E;
+ }
+ 
+ footer {
+     background: #000F08;
+     color: #FDFFFC;
+     text-align: center;    
+     padding: 1rem;
+ }
+ 
+ @media only screen and (max-width: 1000px) {
+     .videoWrapper {
+         position: relative;
+         padding-bottom: 56.25%; /* 16:9 */
+         padding-top: 25px;
+         height: 0;
+         width: auto;
+     }
+     .videoWrapper iframe {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+     }
+ }
+ 
+ @media only screen and (max-width: 600px) {
+     h1 {
+         font-size: 1.2rem;
+     }
+     main {
+         padding: 6rem 5% 1rem 1%;
+     }
+ }
