@@ -4,7 +4,7 @@ require './config/environment'
 require './models'
 
 get '/' do
-    @years = Song.select(:year).distinct
+    @years = Song.select(:year).distinct.order(:year)
     erb :index
 end
 

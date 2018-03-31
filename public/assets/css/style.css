@@ -175,6 +175,7 @@
  }
 
  .centrebox {
+     margin: auto;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -220,9 +221,17 @@
  
  @media only screen and (max-width: 600px) {
      h1 {
-         font-size: 1.2rem;
+         font-size: 1rem;
+     }
+
+     .topheader div {
+         margin-right: 5px;
+     }
+
+     .smallscreen {
+         font-size: 1rem;
      }
      main {
-         padding: 6rem 5% 1rem 1%;
+         padding: 6rem 5% 1rem 5%;
      }
  }
