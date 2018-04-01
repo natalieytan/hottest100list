@@ -9,7 +9,7 @@ get '/' do
 end
 
 get '/song/:id' do
-    @song = Song.find_by_id(params[:id])
+    @song = Song.find_by_id(params[:id].to_i)
     if @song
         erb :song
     else
@@ -19,7 +19,7 @@ end
 
 get '/artist/:artist_slug' do
     artist_slug = params[:artist_slug]
-    @songs = Song.where(artist_slug: params[:artist_slug])
+    @songs = Song.where(artist_slug: params[:artist_slug]).order(:year)
     if @songs.exists?
         @artist = @songs.first.artist
         erb :artist
@@ -37,8 +37,8 @@ post '/year' do
 end
 
 get '/year/:year' do
-    @year = params[:year]
-    @songs = Song.where(year: params[:year])
+    @year = params[:year].to_i
+    @songs = Song.where(year: params[:year]).order(:rank)
     if @songs.exists?
         erb :year
     else
