@@ -138,6 +138,17 @@ For learning, I have documented my process of creating and deploying this app.
 
 6. Seed data
     ```
+    #db/seeds.rb
+    require 'json'
+
+    file = File.read('triplej.json')
+    songs = JSON.parse(file)
+
+    songs.each do |song|
+        Song.create(song)
+    end
+    ```
+    ```
     bundle exec rake:seed
     ```
 
